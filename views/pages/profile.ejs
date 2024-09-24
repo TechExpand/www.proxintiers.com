@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://fab-admin-templates.multipurposethemes.com/fab-admin/images/favicon.ico">
+
+    <title>Broadtrademining </title>
+
+    <!-- Bootstrap 4.0-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Bootstrap extend-->
+    <link rel="stylesheet" href="css/bootstrap-extend.css">
+
+    <!-- theme style -->
+    <link rel="stylesheet" href="css/master_style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0-2/css/all.min.css">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Fab Admin skins -->
+    <link rel="stylesheet" href="css/_all-skins.css">
+    <!-- This is data table -->
+    <link href="css/datatables.min.css" rel="stylesheet" type="text/css" />
+    <!--amcharts -->
+    <link href="www.amcharts.com/lib/3/plugins/export/export.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '7741f783edebc6da907fb30246a8d6114c53034f';
+    window.smartsupp || (function(d) {
+        var s, c, o = smartsupp = function() {
+            o._.push(arguments)
+        };
+        o._ = [];
+        s = d.getElementsByTagName('script')[0];
+        c = d.createElement('script');
+        c.type = 'text/javascript';
+        c.charset = 'utf-8';
+        c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c, s);
+    })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</head>
+
+<body class="hold-transition skin-yellow sidebar-mini">
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+        }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="dashboard.html" class="logo">
+                <!-- mini logo -->
+                <b class="logo-mini">
+                    <h5 class="card-text"><b>Broadtrademining </b></h5>
+                    <!-- <span class="light-logo"><img src="images/logo-light.png" alt="logo"></span> -->
+                    <!-- <span class="dark-logo"><img src="images/logo-dark.png" alt="logo"></span> -->
+                </b>
+                <!-- logo-->
+                <span class="logo-lg">
+                    <!-- <h4 class="card-text">SMT</h4> -->
+                    <!-- <img src="images/logo-light-text.png" alt="logo" class="light-logo"> -->
+                    <!-- <img src="images/logo-dark-text.png" alt="logo" class="dark-logo"> -->
+                </span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div>
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                </div>
+                <div class="navbar-custom-menu r-side">
+                    <ul class="nav navbar-nav ">
+
+                        <!-- User Account-->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fas fa-user text-white"></i>
+                            </a>
+                            <ul class="dropdown-menu scale-up">
+
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <i class="fas fa-user fa-3x text-warning"></i>
+
+                                </li>
+                                <!-- Menu Body -->
+                                SuperAdmin                                <li class="user-body">
+
+
+                                    <div class="row no-gutters">
+
+                                        <div role="separator" class="divider col-12"></div>
+                                        <div class="col-12 text-left">
+                                            <a href="account.php"><i class="ti-settings"></i> Account Setting</a>
+                                        </div>
+                                        <div role="separator" class="divider col-12"></div>
+                                        <div class="col-12 text-left">
+                                            <a href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar">
+
+
+
+                <!-- sidebar menu-->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="active">
+                        <a href="/super-dashboard">
+                            <i class="fa fa-dashboard"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="treeviews">
+                        <a href="admin_btc.html">
+                            <i class="fa fa-user"></i>
+                            <span>Add BTC Address</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Edit User Account
+        </h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="breadcrumb-item"><a href="#"></a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content bg-dark ">
+
+                                
+        <div class="row">
+            <div class="col-lg-9 col-12">
+                <div class="box">
+                    <div class="media-list media-list-divided media-list-hover">
+
+                        <div class="media align-items-center">
+
+                            <span class="badge badge-dot badge-success"></span>
+
+                            <a class="avatar avatar-lg" href="#">
+                                <i class="fas fa-user fa-3x text-info"></i>
+                            </a>
+
+                            <div class="media-body">
+                                <p>
+                                    <a href="#"><strong> <%= user.fullname %></strong></a>
+                                </p>
+                                <p> <%= user.email %></p>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-pills custom-pills nav-white" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link text-success active" id="editprofile-tab" data-toggle="pill" href="#editprofile" role="tab" aria-controls="pills-timeline" aria-selected="true">Edit
+                            Details </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" id="withdraw-tab" data-toggle="pill" href="#withdraw" role="tab" aria-controls="pills-profile" aria-selected="false">Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" id="deposit-tab" data-toggle="pill" href="#deposit" role="tab" aria-controls="pills-profile" aria-selected="false">Deposit</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-success" id="investment-tab" data-toggle="pill" href="#investment" role="tab" aria-controls="pills-address" aria-selected="false">Investment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" id="earning-tab" data-toggle="pill" href="#earning" role="tab" aria-controls="pills-notice" aria-selected="false">Earnings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" id="idv-tab" data-toggle="pill" href="#idv" role="tab" aria-controls="pills-idv" aria-selected="false">ID Verify</a>
+                    </li>
+                </ul>
+                <!-- Tabs -->
+
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="editprofile" role="tabpanel" aria-labelledby="editprofile-tab">
+                        <div class="card-body">
+
+                            <form action="/profile"  class="form-horizontal form-material" id="myform" method="post" accept-charset="utf-8">
+                                <div class="form-group">
+                                    <label class="col-md-12">Username</label>
+                                    <div class="col-md-12">
+                                        <input value="<%= user.email %>" type="text" name="username" value="" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Password</label>
+                                    <div class="col-md-12">
+                                        <input value="<%= profile.password %>" type="text" name="password" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Full Name</label>
+                                    <div class="col-md-12">
+                                        <input value="<%= user.fullname %>" type="text" name="fullname" class="form-control form-control-line bg-gray" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Phone</label>
+                                    <div class="col-md-12">
+                                        <input value="<%= user.phone %>" type="text" name="phone"  class="form-control form-control-line bg-gray" required="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Account PIN</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="pin" value="<%= user.pin??""%>" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Account Upgrade</label>
+                                    <div class="col-md-12">
+                                        <input type="text" disabled value="<%= user.upgrade??"No"%>" class="form-control form-control-line bg-gray">
+                                        <br>
+                                        <select name="upgrade" required class="form-control">
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+<!-- 
+                                <div class="form-group">
+                                    <label for="example-email" class="col-md-12">Wallet Address</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="wallet_address" value="" class="form-control form-control-line bg-gray" id="example-email">
+                                    </div>
+                                </div> -->
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Balance</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="balance" value="<%= profile.balance??""%>" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Currency</label>
+                                    <div class="col-md-12">
+                                        <input type="text" disabled value="<%= user.currency??""%>" class="form-control form-control-line bg-gray">
+
+                                        <select name="currency" class="form-control form-control-line bg-gray">
+                                            <option value="$">Select Currency</option>
+                                            <option>Select Currency</option>
+                                            <option value="$">Dollar</option>
+                                            <option value="€">Euro</option>
+                                            <option value="£">Pound</option>
+                                            <option value="؋">Afghanistan Afghani</option>
+                                            <option value="R$">Brazil Real</option>
+                                            <option value="¥">Yuan</option>
+                                            <option value="¥">Yen</option>
+                                            <option value="kr">Denmark Krone</option>
+                                            <option value="¢">Ghana Cedi</option>
+                                            <option value="INR">India Rupee</option>
+                                            <option value="Rp">Indonesia Rupiah</option>
+                                            <option value="﷼">Iran Rial</option>
+                                            <option value="₪">Israel Shekel</option>
+                                            <option value="J$">Jamaica Dollar</option>
+                                            <option value="₩">Korea (North) Won</option>
+                                            <option value="₩">Korea (South) Won</option>
+                                            <option value="ƒ">Netherlands Antilles Guilder</option>
+                                            <option value="kr">Norway Krone</option>
+                                            <option value="﷼">Oman Rial</option>
+                                            <option value="₽">Russia Ruble</option>
+                                            <option value="﷼">Saudi Arabia Riyal</option>
+                                            <option value="R">South Africa Rand</option>
+                                            <option value="₴">Ukraine Hryvnia</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-12">Profit</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="totalProfit" id="date" value="<%= profile.totalProfit%>" placeholder="" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Active Deposit</label>
+                                    <div class="col-md-12">
+                                        <input type="text"  name="totalDeposit" id="date" value="<%= profile.totalDeposit%>" class="form-control form-control-line">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Last Deposit</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="lastDeposit" id="date" value="<%= profile.lastDeposit%>" placeholder="" class="form-control form-control-line">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Withdrawal</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="totalWithdraw" id="date" value="<%= profile.totalWithdraw%>" placeholder="" class="form-control form-control-line bg-gray">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="hidden" name="id" value=<%= user._id %>>
+                                        <button type="submit" name="user_update" class="btn btn-info mx-auto text-uppercase bg-gray">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
+                        <div class="card-body">
+                            <form class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="h4">User Withdraw History</div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped bg-light text-center">
+                                                <thead>
+                                                    <tr class="text-muted">
+
+
+                                                        <th>Mode</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <h4 class="card-text text-info">Add New Withdrawal</h4>
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Mode</label>
+                                            <select class="form-control bg-gray" required name="mode" required>
+                                                <option value="btc">BTC</option>
+                                                <option value="eth">Ethereum</option>
+                                                <option value="litcoin">Litcoin</option>
+                                                <option value="bank">Bank Transfer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Amount</label>
+                                            <input type="text" required name="amount" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Status</label>
+                                            <select class="form-control bg-gray" required name="status" required>
+                                                <option value="Pending">Pending</option>
+                                                <option value="Successful">Successful</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="user_withdrawal" class="btn btn-info">Add New</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
+                        <div class="card-body">
+                            <form class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="h4">User Deposit History</div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped bg-light text-center">
+                                                <thead>
+                                                    <tr class="text-muted">
+                                                        <th>Avatar</th>
+
+                                                        <th>Mode</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <h4 class="card-text text-info">Add New Deposit</h4>
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Mode</label>
+                                            <select class="form-control bg-gray" required name="mode" required>
+                                                <option>BTC</option>
+                                                <!--                                                 <option>Ethereum</option>
+                                                <option>Litcoin</option>
+                                                <option>Bank Transfer</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Amount</label>
+                                            <input type="text" required name="amount" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Status</label>
+                                            <select class="form-control bg-gray" required name="status" required>
+                                                <option>Pending</option>
+                                                <option>Successful</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="user_deposit" class="btn btn-info">Add New</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="investment" role="tabpanel" aria-labelledby="investment-tab">
+                        <div class="card-body">
+                            <form class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="h4">User Investment History</div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped bg-light text-center">
+                                                <thead>
+                                                    <tr class="text-muted">
+                                                        <th>User ID</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th>Amount</th>
+                                                        <th>Profit</th>
+                                                        <th>Status</th>
+                                                        <th>Duration</th>
+                                                        <th>Date</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <h4 class="card-text text-info">Add New Deposit</h4>
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Plan</label>
+                                            <select class="form-control bg-gray" name="plan" required>
+                                                <option>Plan 1</option>
+                                                <option>Plan 2</option>
+                                                <option>Plan 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Amount</label>
+                                            <input type="text" name="amount" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Profit</label>
+                                            <input type="text" name="profit" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Status</label>
+                                            <select class="form-control bg-gray" name="status" required>
+                                                <option>Pending</option>
+                                                <option>Successful</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Duration</label>
+                                            <input type="text" name="duration" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="user_investment" class="btn btn-info">Add New</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="earning" role="tabpanel" aria-labelledby="earning-tab">
+                        <div class="card-body">
+                            <form class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="h4">User Earning History</div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped bg-light text-center">
+                                                <thead>
+                                                    <tr class="text-muted">
+                                                        <th>#</th>
+                                                        <th>Plan</th>
+                                                        <th>Amount</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <h4 class="card-text text-info">Add New Deposit</h4>
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Plan</label>
+                                            <select class="form-control bg-gray" name="plan" required>
+                                                <option>Plan 1</option>
+                                                <option>Plan 2</option>
+                                                <option>Plan 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="">Profit</label>
+                                            <input type="text" required name="amount" id="" class="form-control bg-gray">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" name="addEarning" class="btn btn-info">Add New</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="idv" role="tabpanel" aria-labelledby="earning-id">
+                        <div class="card-body">
+                            <form class="form-horizontal form-material">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="h4">Approve User ID: <%=user.verified%></div>
+                                        <div class="card-body">
+                                            <form action="/verify-id" class="form-horizontal form-material" id="myformNew" enctype="multipart/form-data" method="POST" ech accept-charset="utf-8"></form>
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <input type="hidden" name="verified"  id="verifiedField"  value="Yes">
+                                                        <input type="hidden" name="id" value="<%=user._id%>">
+                                                        <div  name="verify-id-decline" class="btn btn-danger mx-auto text-uppercase"  onclick="setVerification('No')">Decline ID</button>
+                                                        <button  name="verify-id" class="btn btn-success mx-auto text-uppercase"  onclick="setVerification('Yes')">Approve
+                                                            ID</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+
+
+<!-- EDIT WITHDRAWAL -->
+
+
+
+
+
+
+
+
+
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+    </div>
+    &copy; 2024 <a href="#">Broadtrademining </a>. All Rights Reserved.
+</footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- fund account modal -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Make A New Deposit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="">Amount(USD)</label>
+                        <input type="number" required name="amount" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="mode">
+                            <option>BTC</option>
+                            <option>Ethereum</option>
+                            <option>Litecoin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" name="submit" class="btn btn-info mr-auto"> Proceed</button>
+                        <button type="button" class="btn btn-danger ml-auto" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- fund account modal ends here -->
+
+
+
+
+<!-- jQuery 3 -->
+<script src="js/jquery-3.3.1.js"></script>
+
+<!-- popper -->
+<script src="js/popper.min.js"></script>
+
+<!-- Bootstrap 4.0-->
+<script src="js/bootstrap.js"></script>
+
+<!-- webticker -->
+<script src="js/jquery.webticker.min.js"></script>
+
+<!--amcharts charts -->
+<script src="www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="www.amcharts.com/lib/3/serial.js"></script>
+<script src="www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script src="www.amcharts.com/lib/3/themes/light.js"></script>
+
+<!-- This is data table -->
+<script src="js/datatables.min.js"></script>
+
+<!-- Slimscroll -->
+<script src="js/jquery.slimscroll.js"></script>
+
+<!-- FastClick -->
+<script src="js/fastclick.js"></script>
+
+
+<!-- Fab Admin App -->
+<script src="js/template.js"></script>
+
+<!-- Fab Admin dashboard demo (This is only for demo purposes) -->
+<script src="js/dashboard.js"></script>
+
+<!-- Fab Admin for demo purposes -->
+<script src="js/demo.js"></script>
+<script>
+    function setVerification(value) {
+        document.getElementById('verifiedField').value = value;
+        document.getElementById('myformNew').submit();
+    }
+</script>
+
+</body>
+
+</html>
+</body>
+
+</html>

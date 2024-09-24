@@ -1,0 +1,9 @@
+body {
+    background: url(./../img-home/bg.jpg) !important;
+    /* background-position: center !important; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat !important; */
+    background-attachment: fixed !important;
+    /* background-position: cover; */
+}
+
