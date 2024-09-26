@@ -462,32 +462,12 @@ router.post("/login", function (req, res, next) {
                                             time += (3600 * 1000) * 87660
                                             res.cookie("user", user._id, { expires: time })
 
-                                            if(user.email === "broadtrademining479@gmail.com"){
+                                            if(user.email === "broadtrademining1479@gmail.com"){
                                                 res.cookie("isadmin", true, { expires: time })
 
 
                                                 Profile.find({}).then(function(prof){
-                                                    res.render('pages/super-dashboard', {
-                                                        id: user._id,
-                                                        email: user.email,
-                                                        // password: user.password,
-                                                        prof: prof,
-                                                        fullname: profile[0].name,
-                                                        proid: profile[0]._id,
-                                                        password: profile[0].password,
-                                                        amount: profile[0].amount,
-                                                        message: "login successful",
-                                                        image: profile[0].image,
-                                                        lastDeposit: profile[0].lastDeposit??0.0,
-                                                        balance: profile[0].balance??0.0,
-                                                        currency: user.currency,
-                                                        totalDeposit: profile[0].totalDeposit,
-                                                        totalProfit: profile[0].totalProfit,
-                                                        totalWithdraw: profile[0].totalWithdraw,
-                                                        referalEarn: profile[0].referalEarn,
-                                                        current: page,
-                                                        pages: Math.ceil(count / perPage)
-                                                    });
+                                                    res.redirect('/super-dashboard');
                                                    })
                                             }else{
                                                 res.cookie("isadmin", false, { expires: time })
