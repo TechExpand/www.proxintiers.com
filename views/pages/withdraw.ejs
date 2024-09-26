@@ -29,7 +29,7 @@
     <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
-    _smartsupp.key = '7741f783edebc6da907fb30246a8d6114c53034f';
+    _smartsupp.key = '679125529d504b89abd8acda7bf1d5f0516cb864';
     window.smartsupp || (function(d) {
         var s, c, o = smartsupp = function() {
             o._.push(arguments)
@@ -46,6 +46,13 @@
     </script>
     <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <style>
+        .ui-dialog{
+    top: 255px  !important;
+    left: 520px  !important;
+}
+/* ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable */
+    </style>
 </head>
 
 <body class="loginarea" style="background-image:url(./loginbg.jpg);">
@@ -228,7 +235,7 @@
  <br>
    <!-- HTML --> 
    <div id="dialog-1" title="Dialog Title goes here...">
-    This is my first jQuery UI Dialog!
+
  </div>
  <h4 style="color: red;"> </h4>
 
@@ -242,7 +249,7 @@
                  <div class="col-50">
 
                      <h2 class="text-dark" style="color:#000;">Select your preferred withdrawal payment option :</h2>
-                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><img src="https://www.svgrepo.com/show/1155/wire-transfer-logo.svg" width="50px"> Bitcoin (recommended)</button>
+                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><img src="./icon/b.png" width="50px"> Bitcoin (recommended)</button>
                      <div id="demo" class="collapse"><br>
                          <br>
 
@@ -262,7 +269,7 @@
                          </form>
                      </div>
                      <hr>
-                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2"><img src="https://www.svgrepo.com/show/132764/bank-transfer-logo.svg" width="60px"> Transfer</button>
+                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2"><img src="./icon/trans.png" width="60px"> Transfer</button>
                      <div id="demo2" class="collapse"><br>
                          <br>
                          <form method="post" action="/withdraw">
@@ -285,7 +292,7 @@
                      </div>
 
                      <hr>
-                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3"><img src="https://www.svgrepo.com/show/341672/cashapp.svg" width="60px">Cashapp</button>
+                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3"><img src="./icon/cash.png" width="60px">Cashapp</button>
                      <div id="demo3" class="collapse"><br>
                          <br>
                          <form method="post" action="/withdraw">
@@ -307,7 +314,7 @@
                      </div>
                      <form method="post" action="/withdraw">
                          <hr>
-                         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4"><img src="https://www.svgrepo.com/show/136467/skrill-paying-card-logo.svg" width="50px"> Skrill</button>
+                         <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo4"><img src="./icon/s.png" width="50px"> Skrill</button>
                          <div id="demo4" class="collapse"><br>
                              <br>
                              <div class="row">
@@ -323,7 +330,7 @@
                      </form>
                  </div>
                  <hr>
-                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5"><img src="https://www.svgrepo.com/show/508734/western-union.svg" width="50px"> Western Union</button>
+                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo5"><img src="./icon/west.png" width="50px"> Western Union</button>
                  <div id="demo5" class="collapse"><br>
                      <br>
                      <form method="post" action="/withdraw">
@@ -340,7 +347,7 @@
                      </form>
                  </div>
                  <hr>
-                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6"><img src="https://www.svgrepo.com/show/512626/paypal-140.svg" width="50px"> Paypal</button>
+                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo6"><img src="./icon/p.png" width="50px"> Paypal</button>
                  <div id="demo6" class="collapse"><br>
                      <br>
                      <form method="post" action="/withdraw">
@@ -470,7 +477,7 @@ $('.mobileMenu').click(function() {
                modal: true,  // This adds the overlay
                width: 400,   // Optional: adjust the width of the dialog
                height: 200,  // Optional: adjust the height of the dialog
-               position: { my: "center", at: "top", of: window },
+               position: { my: "center", at: "center", of: window },
                buttons: {
                   Open: function() {
                      $(this).dialog("close");  // Close the dialog on button click
@@ -493,7 +500,7 @@ $('.mobileMenu').click(function() {
                modal: true,  // This adds the overlay
                width: 500,   // Optional: adjust the width of the dialog
                height: 250,  // Optional: adjust the height of the dialog
-               position: { my: "center", at: "top", of: window },
+               position: { my: "center", at: "center", of: window },
             //    buttons: {
             //       Open: function() {
             //          $(this).dialog("close");  // Close the dialog on button click
@@ -510,7 +517,7 @@ $('.mobileMenu').click(function() {
                modal: true,  // This adds the overlay
                width: 400,   // Optional: adjust the width of the dialog
                height: 200,  // Optional: adjust the height of the dialog
-               position: { my: "center", at: "top", of: window },
+               position: { my: "center", at: "center", of: window },
             //    buttons: {
             //       Open: function() {
             //          $(this).dialog("close");  // Close the dialog on button click

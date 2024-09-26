@@ -41,7 +41,7 @@
     <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
-    _smartsupp.key = '7741f783edebc6da907fb30246a8d6114c53034f';
+    _smartsupp.key = '679125529d504b89abd8acda7bf1d5f0516cb864';
     window.smartsupp || (function(d) {
         var s, c, o = smartsupp = function() {
             o._.push(arguments)
@@ -625,28 +625,21 @@
 
                     <div class="tab-pane fade" id="idv" role="tabpanel" aria-labelledby="earning-id">
                         <div class="card-body">
-                            <form class="form-horizontal form-material">
+                            <form method="post" action="/verify-id" class="form-horizontal form-material">
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="h4">Approve User ID: <%=user.verified%></div>
-                                        <div class="card-body">
-                                            <form action="/verify-id" class="form-horizontal form-material" id="myformNew" enctype="multipart/form-data" method="POST" ech accept-charset="utf-8"></form>
-                                                <div class="form-group">
-                                                    <div class="col-sm-12">
-                                                        <input type="hidden" name="verified"  id="verifiedField"  value="Yes">
-                                                        <input type="hidden" name="id" value="<%=user._id%>">
-                                                        <div  name="verify-id-decline" class="btn btn-danger mx-auto text-uppercase"  onclick="setVerification('No')">Decline ID</button>
-                                                        <button  name="verify-id" class="btn btn-success mx-auto text-uppercase"  onclick="setVerification('Yes')">Approve
-                                                            ID</button>
-                                                       v
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            
-                                            
-                                        </div>
-
+                                    <label class="col-md-12">Account Verification</label>
+                                    <div class="col-md-12">
+                                        <input type="text" disabled value="<%= user.verified??"No"%>" class="form-control form-control-line bg-gray">
+                                        <input type="hidden" name="id" value=<%= user._id %>>
+                                        <br>
+                                        <select name="verified" required class="form-control">
+                                            <option value="No">No</option>
+                                            <option value="Yes">Yes</option>
+                                        </select>
+                                        <br>
+                                        <button type="submit" name="user_update" class="btn btn-info mx-auto text-uppercase bg-gray">Update</button>
                                     </div>
+                                   
                                 </div>
                             </form>
                         </div>

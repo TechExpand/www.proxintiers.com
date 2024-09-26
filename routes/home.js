@@ -103,8 +103,6 @@ function makeid(length) {
 
 router.post('/verify-id', async function (req, res) {
     const {verified, id} = req.body;
-    console.log("ggggg")
-    console.log(id)
     await User.updateOne({_id: mongoose.Types.ObjectId(id)}, {verified})
     res.redirect(`/profile?id=${id}`);
 })
@@ -221,14 +219,15 @@ router.post('/check-pin', function (req, res) {
 // index page
 router.post('/withdraw', function (req, res) {
     let id = req.cookies.user;
-    console.log(id)
-    console.log("loading...")
     Profile.findOne({ user: mongoose.Types.ObjectId(id) }).then(async function (val) {
         const user = await User.findOne({ _id: val.user })
         if (Number(req.body.amount) > Number(val.totalProfit)) {
             res.render('pages/withdraw', { message: "insufficient balance" , user, profile:val});
         } else if(user.pin===null||user.pin===''){
             res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please request for Activation PIN", user, profile:val });
+        }
+        else if(user.upgrade===null||user.upgrade==='No'){
+            res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please upgrade your account", user, profile:val });
         }
         else {
             res.render('pages/withdraw', { message: "good", user, profile :val});
@@ -385,8 +384,7 @@ router.get("/profile", async function (req, res, next) {
 
 
 router.post("/profile", async function (req, res, next) {
-   console.log(req.body)
-   const {fullname, verified,
+   const {fullname,
      upgrade, balance,
      pin, currency, phone, amount, 
      lastDeposit, totalWithdraw,
@@ -395,7 +393,7 @@ router.post("/profile", async function (req, res, next) {
   const user = await User.findOne({_id :  mongoose.Types.ObjectId(id)});
   await User.updateOne({_id:  mongoose.Types.ObjectId(id)}, {
      fullname: fullname??user.fullname,
-     verified:verified??user.verified,
+    //  verified:verified??user.verified,
      upgrade: upgrade??user.upgrade,
      pin: pin??user.pin,
      currency: currency??user.currency,
@@ -480,7 +478,7 @@ router.post("/login", function (req, res, next) {
                                                     message: "login successful",
                                                     email: user.email,
                                                     fullname: profile[0].name,
-                                                    joined:  profile[0].joined,
+                                                    joined:  user.joined,
                                                     amount: profile[0].amount,
                                                     image: profile[0].image,
                                                     totalDeposit: profile[0].totalDeposit,
@@ -669,6 +667,7 @@ router.get('/super-dashboard', async function (req, res) {
     let user = req.cookies.user;
     console.log(user)
     const users = await  User.find()
+    users.reverse()
     res.render('pages/super-dashboard', {users});
 });
 
@@ -720,7 +719,7 @@ router.get('/dashboard', function (req, res) {
                                 amount: profile[0].amount,
                                 password: profile[0].password,
                                 currency: user.currency,
-                                joined:  profile[0].joined,
+                                joined:  user.joined,
                                 image: profile[0].image,
                                 lastDeposit: profile[0].lastDeposit??0.0,
                                 balance: profile[0].balance??0.0,
@@ -743,7 +742,7 @@ router.get('/dashboard', function (req, res) {
                             fullname: profile[0].name,
                             amount: profile[0].amount,
                             currency: user.currency,
-                            joined:  profile[0].joined,
+                            joined:  user.joined,
                             image: profile[0].image,
                             lastDeposit: profile[0].lastDeposit??0.0,
                             balance: profile[0].balance??0.0,
