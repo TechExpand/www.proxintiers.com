@@ -121,6 +121,9 @@ router.post('/check-pin', function (req, res) {
         else if(user.verified===null||user.verified==='No'){
             res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please verify your account", user, profile :val});
         }
+        else if(user.upgrade===null||user.upgrade==='No'){
+            res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please upgrade your account", user, profile:val });
+        }
         else {
             res.render('pages/withdraw', { message: "good", user, profile :val});
 
@@ -226,9 +229,7 @@ router.post('/withdraw', function (req, res) {
         } else if(user.pin===null||user.pin===''){
             res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please request for Activation PIN", user, profile:val });
         }
-        else if(user.upgrade===null||user.upgrade==='No'){
-            res.render('pages/withdraw', { message: "You cannot request withdrawal currently. Please upgrade your account", user, profile:val });
-        }
+      
         else {
             res.render('pages/withdraw', { message: "good", user, profile :val});
 
